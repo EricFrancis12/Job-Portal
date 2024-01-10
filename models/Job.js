@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import User from './User';
 
 const JobSchema = new mongoose.Schema({
-
     user : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
@@ -47,9 +46,7 @@ const JobSchema = new mongoose.Schema({
     job_deadline: {
         type: Date,
         required: true,
-    },
-
-
+    }
 },{timestamps: true});
 
 const Job =  mongoose.models.Job || mongoose.model('Job', JobSchema);
